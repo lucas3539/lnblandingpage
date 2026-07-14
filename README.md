@@ -1,19 +1,27 @@
-# LNB Growth — Landing Page
+# YAT Scales — youngandturnt
 
-Landing Page für die Marketingagentur **LNB Growth**.
+Dunkle Portfolio-/Landing-Page für **YAT Scales** (youngandturnt) — Illustration, Grafik und Digital Art.
 
-## Services
+Besucher können **Auftragsarbeiten (Commissions)** und **Kollaborationen** anfragen — per WhatsApp, Instagram oder Telefon.
 
-- Content-Erstellung
-- Werbeanzeigen mit Meta Ads
-- Videografie
-- Fotoproduktion
-- Webseiten-Erstellung
-- KI-Telefonrezeptionisten
-- Kundengewinnung / Leadgenerierung
-- Automatisierung von Geschäftsprozessen
+## Stack
 
-## Los geht's
+Pures HTML, CSS und Vanilla-JavaScript — kein Framework, kein Build-Schritt, keine externen Abhängigkeiten.
 
-Der komplette Erstellungs-Prompt für die Landing Page liegt in [PROMPT.md](PROMPT.md) —
-einfach an Claude Code übergeben, um die Seite zu bauen.
+- `index.html` — die komplette Seite
+- `css/style.css` — Design-System (warmes Schwarz `#17160e`, Eis-Blau-Akzent, brutale Typografie)
+- `js/main.js` — Menü-Overlay, Parallax-Wasserzeichen, Scroll-Reveals
+- `assets/` — freigestellte Logo-Varianten (aus `logos/` generiert)
+- `logos/` — Original-Logodateien
+
+## Offene Platzhalter (im Code mit `TODO` markiert)
+
+- Telefonnummer (`tel:`-Links)
+- WhatsApp-Nummer (`wa.me`-Links)
+- Instagram-Profil-URL
+- Impressum & Datenschutz
+- Galerie-Kacheln durch echte Werke ersetzen
+
+---
+
+*Frühere Version dieses Repos: LNB-Growth-Landing-Page (siehe Git-Historie; der damalige Erstellungs-Prompt liegt in `PROMPT.md`).*
