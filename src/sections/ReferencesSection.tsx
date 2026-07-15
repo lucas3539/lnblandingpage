@@ -12,6 +12,12 @@ interface Reference {
   col2: string;
 }
 
+// Weiches Einblenden nach dem Laden (langsame GIFs poppen nicht hart rein).
+function fadeIn(e: React.SyntheticEvent<HTMLImageElement>) {
+  e.currentTarget.style.opacity = '1';
+}
+const IMG_FADE = { opacity: 0, transition: 'opacity 0.5s ease' } as const;
+
 // Platzhalter, bis die echten Arbeiten da sind: je 3 animierte Website-Previews
 // (Referenzbilder) pro Karte, dieselben GIFs wie in der Marquee (schon gecached).
 const REFERENCES: Reference[] = [
@@ -95,15 +101,19 @@ function ReferenceCard({
                 src={reference.col1[0]}
                 alt={`${reference.name} – Bild 1`}
                 loading="lazy"
-                className="w-full object-cover rounded-[40px] sm:rounded-[50px] md:rounded-[60px]"
-                style={{ height: 'clamp(130px, 16vw, 230px)' }}
+                decoding="async"
+                onLoad={fadeIn}
+                className="w-full object-cover rounded-[40px] sm:rounded-[50px] md:rounded-[60px] bg-[#0a0c10]"
+                style={{ height: 'clamp(130px, 16vw, 230px)', ...IMG_FADE }}
               />
               <img
                 src={reference.col1[1]}
                 alt={`${reference.name} – Bild 2`}
                 loading="lazy"
-                className="w-full object-cover rounded-[40px] sm:rounded-[50px] md:rounded-[60px]"
-                style={{ height: 'clamp(160px, 22vw, 340px)' }}
+                decoding="async"
+                onLoad={fadeIn}
+                className="w-full object-cover rounded-[40px] sm:rounded-[50px] md:rounded-[60px] bg-[#0a0c10]"
+                style={{ height: 'clamp(160px, 22vw, 340px)', ...IMG_FADE }}
               />
             </div>
             <div className="w-[60%]">
@@ -111,7 +121,10 @@ function ReferenceCard({
                 src={reference.col2}
                 alt={`${reference.name} – Bild 3`}
                 loading="lazy"
-                className="h-full w-full object-cover rounded-[40px] sm:rounded-[50px] md:rounded-[60px]"
+                decoding="async"
+                onLoad={fadeIn}
+                className="h-full w-full object-cover rounded-[40px] sm:rounded-[50px] md:rounded-[60px] bg-[#0a0c10]"
+                style={IMG_FADE}
               />
             </div>
           </div>

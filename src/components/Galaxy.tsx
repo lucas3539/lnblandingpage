@@ -250,7 +250,27 @@ export default function Galaxy({ focalX = 0.5, focalY = 0.58 }: GalaxyProps) {
         ctx!.fill();
       }
 
-      if (!reduce) raf = requestAnimationFrame(render);
+    }
+
+    // Schleife nur laufen lassen, wenn der Hero sichtbar & der Tab aktiv ist.
+    let running = false;
+    let onScreen = true;
+    function frame() {
+      render();
+      if (running && !reduce) raf = requestAnimationFrame(frame);
+    }
+    function start() {
+      if (running || reduce) return;
+      running = true;
+      raf = requestAnimationFrame(frame);
+    }
+    function stop() {
+      running = false;
+      cancelAnimationFrame(raf);
+    }
+    function sync() {
+      if (onScreen && document.visibilityState === 'visible') start();
+      else stop();
     }
 
     function onMove(e: MouseEvent) {
@@ -260,13 +280,27 @@ export default function Galaxy({ focalX = 0.5, focalY = 0.58 }: GalaxyProps) {
 
     resize();
     render(); // erster Frame (bei reduced motion der einzige)
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        onScreen = entries[0]?.isIntersecting ?? true;
+        sync();
+      },
+      { threshold: 0 },
+    );
+    io.observe(canvas);
+
     window.addEventListener('resize', resize);
     window.addEventListener('mousemove', onMove);
+    document.addEventListener('visibilitychange', sync);
+    sync();
 
     return () => {
-      cancelAnimationFrame(raf);
+      stop();
+      io.disconnect();
       window.removeEventListener('resize', resize);
       window.removeEventListener('mousemove', onMove);
+      document.removeEventListener('visibilitychange', sync);
     };
   }, [focalX, focalY]);
 
