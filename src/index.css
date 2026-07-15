@@ -56,3 +56,45 @@ body {
     radial-gradient(70% 60% at 50% 110%, rgba(37, 99, 235, 0.18), transparent 60%),
     var(--bg);
 }
+
+/* ===== Reflektierendes Chrom-Logo =====
+   Das weiße Herz-PNG dient als Maske; darunter läuft ein metallischer
+   Chrom-Verlauf mit kühlen Blau-Reflexen (Galaxie), der sanft schimmert. */
+.chrome-logo {
+  -webkit-mask: url(/assets/logo-weiss-gross.png) center / contain no-repeat;
+  mask: url(/assets/logo-weiss-gross.png) center / contain no-repeat;
+  background: linear-gradient(
+    155deg,
+    #46515b 0%,
+    #9fb2c2 12%,
+    #eef5fa 22%,
+    #aebfce 34%,
+    #ffffff 44%,
+    #7f909e 56%,
+    #c9daf0 68%,
+    #9fb8d8 80%,
+    #566470 90%,
+    #2f3944 100%
+  );
+  background-size: 200% 200%;
+  filter: drop-shadow(0 0 34px rgba(120, 170, 255, 0.28));
+  animation: chrome-shimmer 7s ease-in-out infinite;
+}
+
+@keyframes chrome-shimmer {
+  0% {
+    background-position: 12% 0%;
+  }
+  50% {
+    background-position: 88% 100%;
+  }
+  100% {
+    background-position: 12% 0%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .chrome-logo {
+    animation: none;
+  }
+}
