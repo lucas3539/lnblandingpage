@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ===== YAT Scales — Palette: Midnight Steel + Elektroblau (von Jack übernommen) ===== */
+:root {
+  --bg: #0a0c10; /* tiefes Blau-Schwarz */
+  --surface: #10141c; /* angehobene Kartenfläche für Tiefe */
+  --text: #d7e2ea;
+  --accent: #3b82f6;
+  --accent-deep: #2563eb;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body,
+#root {
+  background: var(--bg);
+}
+
+body {
+  font-family: 'Kanit', sans-serif;
+}
+
+.hero-heading {
+  background: linear-gradient(180deg, #646973 0%, #bbccd7 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===== Tiefen-Glow für die dunklen Sektionen ===== */
+.glow-hero {
+  background:
+    radial-gradient(90% 55% at 50% -8%, rgba(37, 99, 235, 0.2), transparent 60%),
+    radial-gradient(55% 45% at 85% 18%, rgba(59, 130, 246, 0.1), transparent 60%);
+}
+
+.glow-about {
+  background: radial-gradient(60% 45% at 50% 40%, rgba(37, 99, 235, 0.08), transparent 65%);
+}
+
+.glow-projects {
+  background:
+    radial-gradient(80% 45% at 50% 0%, rgba(37, 99, 235, 0.16), transparent 60%),
+    var(--bg);
+}
+
+.glow-contact {
+  background:
+    radial-gradient(70% 60% at 50% 110%, rgba(37, 99, 235, 0.18), transparent 60%),
+    var(--bg);
+}

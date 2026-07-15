@@ -1,27 +1,40 @@
 # YAT Scales — youngandturnt
 
-Dunkle Portfolio-/Landing-Page für **YAT Scales** (youngandturnt) — Illustration, Grafik und Digital Art.
+Dunkle Portfolio-Landing-Page für **YAT Scales** (youngandturnt) — Illustration, Grafik und Digital Art.
+Besucher können Auftragsarbeiten und Kollaborationen anfragen — per WhatsApp, Instagram oder Telefon.
 
-Besucher können **Auftragsarbeiten (Commissions)** und **Kollaborationen** anfragen — per WhatsApp, Instagram oder Telefon.
+Aufgebaut nach der Struktur & den Animationen der Jack-3D-Portfolio-Vorlage,
+mit YAT-Identität (Herz-Logo, deutsche Texte) und der Palette „Midnight Steel + Elektroblau".
 
 ## Stack
 
-Pures HTML, CSS und Vanilla-JavaScript — kein Framework, kein Build-Schritt, keine externen Abhängigkeiten.
+React 18 + TypeScript + Vite + Tailwind CSS + Framer Motion + Lucide React.
 
-- `index.html` — die komplette Seite
-- `css/style.css` — Design-System (warmes Schwarz `#17160e`, Eis-Blau-Akzent, brutale Typografie)
-- `js/main.js` — Menü-Overlay, Parallax-Wasserzeichen, Scroll-Reveals
-- `assets/` — freigestellte Logo-Varianten (aus `logos/` generiert)
-- `logos/` — Original-Logodateien
+## Entwicklung
+
+Node 20 nötig (liegt bei diesem Setup in `~/.local/node20`, nicht im Standard-PATH):
+
+```bash
+export PATH="$HOME/.local/node20/bin:$PATH"
+npm install
+npm run dev      # Entwicklungsserver
+npm run build    # Produktions-Build nach dist/
+```
+
+## Struktur
+
+- `src/sections/` — Hero, Marquee, Story, Services (Angebot), References (Referenzen), Contact
+- `src/components/` — FadeIn, Magnet, AnimatedText, ContactButton, BrandContacts, GhostButton
+- `src/data/previews.ts` — animierte GIF-Referenzbilder (Marquee + Referenz-Karten)
+- `public/assets/` — Herz-Logo-Varianten
 
 ## Offene Platzhalter (im Code mit `TODO` markiert)
 
-- Telefonnummer (`tel:`-Links)
-- WhatsApp-Nummer (`wa.me`-Links)
-- Instagram-Profil-URL
+- WhatsApp-Nummer, Instagram-Profil, Telefonnummer, E-Mail
 - Impressum & Datenschutz
-- Galerie-Kacheln durch echte Werke ersetzen
+- Referenz-Karten durch echte Arbeiten ersetzen (aktuell GIF-Platzhalter)
 
 ---
 
-*Frühere Version dieses Repos: LNB-Growth-Landing-Page (siehe Git-Historie; der damalige Erstellungs-Prompt liegt in `PROMPT.md`).*
+*Frühere Versionen dieses Repos in der Git-Historie: LNB-Growth-Landing-Page und die
+YAT-Scales-Vanilla-Version (HTML/CSS/JS).*
