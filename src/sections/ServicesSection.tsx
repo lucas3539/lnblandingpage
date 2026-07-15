@@ -3,33 +3,15 @@ import FadeIn from '../components/FadeIn';
 const SERVICES = [
   {
     number: '01',
-    name: 'Illustration',
+    name: 'Webseiten-Erstellung',
     description:
-      'Individuelle Illustrationen nach deiner Idee: Artworks, Poster, Editorials und Charaktere — mit eigener, unverwechselbarer Bildsprache.',
+      'Moderne, schnelle Websites, die aus Besuchern Kunden machen — von der ersten Idee bis zum Livegang, individuell auf dein Business zugeschnitten und auf jedem Gerät perfekt.',
   },
   {
     number: '02',
-    name: 'Digital Art & 3D',
+    name: 'Google-Sichtbarkeit',
     description:
-      'Digitale Kunst und 3D-Renderings zwischen roher Fläche und fließender Form — experimentell, markant und für Print wie Screen.',
-  },
-  {
-    number: '03',
-    name: 'Cover & Artwork',
-    description:
-      'Cover-Artworks und Key-Visuals für Musik, Marken und Projekte, die im Feed und im Regal sofort auffallen.',
-  },
-  {
-    number: '04',
-    name: 'Branding',
-    description:
-      'Visuelle Identitäten von der ersten Idee bis zum fertigen System — Logo, Farbwelt und Bildsprache aus einer Hand.',
-  },
-  {
-    number: '05',
-    name: 'Kollaborationen',
-    description:
-      'Gemeinsame Projekte mit Brands, Künstlern und Labels — wenn unsere Welten zusammenpassen, entsteht etwas Eigenes.',
+      'Damit dich deine Kunden finden: optimiertes Google-Unternehmensprofil, lokale Präsenz und Suchmaschinen-Optimierung für mehr Anfragen aus deiner Region.',
   },
 ];
 

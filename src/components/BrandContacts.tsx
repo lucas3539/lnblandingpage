@@ -2,8 +2,7 @@
 // WhatsApp, Instagram, Telefon. Hover flutet den Button in der Markenfarbe.
 // TODO: echte Nummern/Profile eintragen (unten markiert).
 
-// Telefon 0174 4155783 → international +49 174 4155783.
-// Annahme: gleiche Nummer auch für WhatsApp (bitte bestätigen).
+// Telefon 0174 4155783 → international +49 174 4155783 (WhatsApp = gleiche Nummer).
 const WA_LINK = 'https://wa.me/491744155783';
 const IG_LINK = 'https://instagram.com/_dndcom';
 const TEL_LINK = 'tel:+491744155783';

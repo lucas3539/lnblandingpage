@@ -28,10 +28,10 @@ export default function ContactSection() {
           <p className="text-[#D7E2EA]/60 mt-8 text-sm">
             Oder per E-Mail:{' '}
             <a
-              href="mailto:youngandturt.business@gmail.com"
+              href="mailto:youngandturnt.business@gmail.com"
               className="text-[#3B82F6] hover:underline break-all"
             >
-              youngandturt.business@gmail.com
+              youngandturnt.business@gmail.com
             </a>
           </p>
         </FadeIn>
@@ -49,12 +49,11 @@ export default function ContactSection() {
             YAT Scales — youngandturnt
           </span>
         </div>
-        {/* TODO: Impressum & Datenschutz verlinken */}
         <div className="flex gap-6 text-[#D7E2EA]/60 text-sm">
-          <a href="#" className="hover:text-[#D7E2EA]">
+          <a href="#impressum" className="hover:text-[#D7E2EA]">
             Impressum
           </a>
-          <a href="#" className="hover:text-[#D7E2EA]">
+          <a href="#datenschutz" className="hover:text-[#D7E2EA]">
             Datenschutz
           </a>
         </div>

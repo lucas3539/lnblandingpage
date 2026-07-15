@@ -6,7 +6,7 @@ const BASE =
   'https://shrug-person-78902957.figma.site/_components/v2/ebb2b8f25d8e24d5f0a5ca8af4c950de81aa2fd7';
 
 const STORY_TEXT =
-  'YAT Scales ist mein Ventil: Illustration und Digital Art zwischen roher Fläche und fließender Form. Jedes Stück entsteht wie das Herz im Logo — organisch, in Bewegung, ohne gerade Linien. Ob Artwork, Cover oder komplettes visuelles Konzept: youngandturnt ist die Haltung dahinter. Lass uns zusammen etwas Eigenes schaffen!';
+  'Ich baue Websites, die nicht nur gut aussehen, sondern gefunden werden. Von der ersten Idee bis zum Livegang — schnell, modern und auf dein Business zugeschnitten. Dazu sorge ich dafür, dass dich deine Kunden bei Google finden. youngandturnt ist die Haltung dahinter: klar, direkt, ohne Schnickschnack. Lass uns deinen Auftritt bauen!';
 
 export default function StorySection() {
   return (

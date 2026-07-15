@@ -18,21 +18,21 @@ const REFERENCES: Reference[] = [
   {
     number: '01',
     name: 'Referenz 01',
-    category: 'Illustration',
+    category: 'Webdesign',
     col1: [PREVIEW_GIFS[0], PREVIEW_GIFS[1]],
     col2: PREVIEW_GIFS[2],
   },
   {
     number: '02',
     name: 'Referenz 02',
-    category: 'Digital Art',
+    category: 'Landingpage',
     col1: [PREVIEW_GIFS[3], PREVIEW_GIFS[4]],
     col2: PREVIEW_GIFS[5],
   },
   {
     number: '03',
     name: 'Referenz 03',
-    category: 'Kollaboration',
+    category: 'Google-Sichtbarkeit',
     col1: [PREVIEW_GIFS[6], PREVIEW_GIFS[8]],
     col2: PREVIEW_GIFS[13],
   },
@@ -143,8 +143,8 @@ export default function ReferencesSection() {
       </FadeIn>
       <FadeIn delay={0.1}>
         <p className="text-[#D7E2EA]/60 text-center max-w-xl mx-auto mb-16 sm:mb-20 md:mb-28 font-light">
-          Platzhalter, bis meine eigenen Arbeiten hier einziehen — folg mir auf
-          Instagram für aktuelle Werke.
+          Platzhalter, bis meine eigenen Projekte hier einziehen — schreib mir
+          für aktuelle Beispiele.
         </p>
       </FadeIn>
 
