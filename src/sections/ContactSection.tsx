@@ -24,15 +24,14 @@ export default function ContactSection() {
         <FadeIn delay={0.3}>
           <BrandContacts large />
         </FadeIn>
-        {/* TODO: echte E-Mail-Adresse eintragen */}
         <FadeIn delay={0.4}>
           <p className="text-[#D7E2EA]/60 mt-8 text-sm">
             Oder per E-Mail:{' '}
             <a
-              href="mailto:hallo@yatscales.de"
-              className="text-[#3B82F6] hover:underline"
+              href="mailto:youngandturt.business@gmail.com"
+              className="text-[#3B82F6] hover:underline break-all"
             >
-              hallo@yatscales.de
+              youngandturt.business@gmail.com
             </a>
           </p>
         </FadeIn>

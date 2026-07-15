@@ -2,9 +2,11 @@
 // WhatsApp, Instagram, Telefon. Hover flutet den Button in der Markenfarbe.
 // TODO: echte Nummern/Profile eintragen (unten markiert).
 
-const WA_LINK = 'https://wa.me/49XXXXXXXXX'; // TODO: WhatsApp-Nummer
-const IG_LINK = 'https://instagram.com/youngandturnt'; // TODO: Instagram-Profil prüfen
-const TEL_LINK = 'tel:+49XXXXXXXXX'; // TODO: Telefonnummer
+// Telefon 0174 4155783 → international +49 174 4155783.
+// Annahme: gleiche Nummer auch für WhatsApp (bitte bestätigen).
+const WA_LINK = 'https://wa.me/491744155783';
+const IG_LINK = 'https://instagram.com/_dndcom';
+const TEL_LINK = 'tel:+491744155783';
 
 interface BrandContactsProps {
   large?: boolean;
